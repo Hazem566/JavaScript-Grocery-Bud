@@ -66,6 +66,7 @@ header h1 {
     border-color: transparent;
     background: #eee;
     font-size: 1.2rem;
+    outline: none;
 }
 #grocery__input::placeholder {
     font-size: 1rem;
