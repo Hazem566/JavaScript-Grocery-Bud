@@ -4,23 +4,137 @@
     margin: 0;
     box-sizing: border-box;
 }
+img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+button {
+    cursor: pointer;
+}
 body {
     min-height: 100vh;
     font-family: "Poppin", sans-serif;
+    background-color: #f1fbff;
+    color: #000;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+main {
+    width: 90%;
+    max-width: 40rem;
+    margin: 0 auto;
+    margin-top: 8rem;
+}
+.container {
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    padding: 1rem 1.5rem;
+}
+header {
+    text-align: center;
+    text-transform: capitalize;
+}
+.alert {
+    height: 1.4rem;
+    display: grid;
+    align-content: center;
+    border-radius: 0.3rem;
+    letter-spacing: 2px;
+}
+.alert-danger {
+    color: rgb(255, 46, 46);
+    background-color: rgb(255, 187, 187);
+}
+.alert-success{
+    background-color: rgb(178, 255, 178);
+    color: green;
+}
+header h1 {
+    letter-spacing: 3px;
+}
+.grocery__form {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-areas: "input input input input input btn btn";
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+#grocery__input {
+    grid-area: input;
+    padding: 0.5rem 1rem;
+    border-color: transparent;
+    background: #eee;
+    font-size: 1.2rem;
+}
+#grocery__input::placeholder {
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+#submit__btn {
+    grid-area: btn;
+    border-color: transparent;
+    background-color: rgb(188, 236, 252);
+    font-size: 1.1rem;
+    letter-spacing: 0.2rem;
+}
+#submit__btn:hover {
+    background-color: rgb(132, 216, 255);
+}
+.items__container {
+    text-transform: capitalize;
+    margin-top: 1.2rem;
+}
+.items {
+    list-style: none;
+    visibility: hidden;
+}
+.items__scroll {
+    max-height: 244.5px;
+    overflow-y: scroll;
+}
+.show__items {
+    visibility: visible;
+}
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(0,0,0,0.7);
+    padding: 0.3rem 1rem;
+    border-radius: 1rem;
+}
+.item:not(:last-child) {
+    margin-bottom: 0.5rem;
+}
+.item__title {
+    letter-spacing: 2.5px;
+}
+#edit__btn,
+#delete__btn {
+    background-color: transparent;
+    border-color: transparent;
+    margin-right: 0.25rem;
+}
+.clear__btn {
+    text-align: center;
+    margin-top: 0.6rem;
+    display: none;
+}
+.show__clear {
+    display: block;
+}
+#clear {
+    font-size: 1.1rem;
+    letter-spacing: 4px;
+    text-transform: capitalize;
+    padding: 0.1rem 1rem;
+    background-color: transparent;
+    border: none;
+    color: crimson;
+}
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+}
